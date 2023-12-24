@@ -23,9 +23,9 @@ const { NotImplementedError } = require('../extensions/index.js');
  * }
  */
 function removeKFromList(l, k) {
-
   let node = l;
   let prev = null;
+
 while (node.next != null) {
   if (node.value === k) {
     node.value = node.next.value; // set next node to be current node
@@ -35,6 +35,7 @@ while (node.next != null) {
     node = node.next;
   }
 }
+
 if (node.value === k) {
   prev.next = null;
 }
